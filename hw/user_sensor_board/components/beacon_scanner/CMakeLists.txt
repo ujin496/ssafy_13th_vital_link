@@ -1,8 +1,12 @@
+idf_build_get_property(idf_path IDF_PATH)
+
+set(nimble_host_dir "${idf_path}/components/bt/host/nimble/nimble/nimble/host/include/host")
+
 idf_component_register(
     SRCS "src/beacon_scanner_task.c"
          "src/wifi_connect.c"
-         "src/esp_ibeacon_api.c"
     INCLUDE_DIRS "include"
-    PRIV_REQUIRES bt nvs_flash
-    REQUIRES esp_wifi esp_event esp_netif mqtt
+    PRIV_INCLUDE_DIRS "${nimble_host_dir}"
+    REQUIRES nvs_flash mqtt esp_event esp_netif esp_wifi bt
 )
+

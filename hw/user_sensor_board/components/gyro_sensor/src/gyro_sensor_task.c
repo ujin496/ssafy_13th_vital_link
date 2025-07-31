@@ -3,6 +3,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
+#include "mpu6050_driver.h"
 #include "gyro_sensor_task.h"
 
 #define I2C_MASTER_NUM I2C_NUM_0
@@ -11,37 +12,6 @@
 #define I2C_FREQ_HZ    400000
 
 static const char *TAG = "GYRO";
-
-esp_err_t mpu6050_init(i2c_port_t i2c_num) {
-    uint8_t data;
-
-    // Wake up device
-    data = 0x00;
-    ESP_ERROR_CHECK(i2c_master_write_to_device(i2c_num, MPU6050_ADDR, &data, 1, pdMS_TO_TICKS(100)));
-
-    // Set PWR_MGMT_1 to 0 (wake up)
-    return i2c_master_write_to_device(i2c_num, MPU6050_ADDR, (uint8_t[]){MPU6050_PWR_MGMT_1, 0}, 2, pdMS_TO_TICKS(100));
-}
-
-esp_err_t mpu6050_read_data(i2c_port_t i2c_num, mpu6050_data_t* data) {
-    uint8_t buffer[14];
-    esp_err_t err;
-
-    err = i2c_master_write_read_device(i2c_num, MPU6050_ADDR,
-                                       (uint8_t[]){MPU6050_ACCEL_XOUT_H}, 1,
-                                       buffer, sizeof(buffer),
-                                       pdMS_TO_TICKS(100));
-    if (err != ESP_OK) return err;
-
-    data->ax = (buffer[0] << 8) | buffer[1];
-    data->ay = (buffer[2] << 8) | buffer[3];
-    data->az = (buffer[4] << 8) | buffer[5];
-    data->gx = (buffer[8] << 8) | buffer[9];
-    data->gy = (buffer[10] << 8) | buffer[11];
-    data->gz = (buffer[12] << 8) | buffer[13];
-
-    return ESP_OK;
-}
 
 void i2c_master_init(void) {
     static bool initialized = false;
@@ -70,12 +40,18 @@ void gyro_task(void *pvParameters) {
                    sensor_data.gx, sensor_data.gy, sensor_data.gz);
         }
 
-        vTaskDelay(pdMS_TO_TICKS(500));
+        vTaskDelay(pdMS_TO_TICKS(20));  // 약 50Hz 주기
     }
 }
 
 void gyro_sensor_start(void) {
     i2c_master_init();
-    mpu6050_init(I2C_MASTER_NUM);
+
+    if (mpu6050_init(I2C_MASTER_NUM) == ESP_OK) {
+        ESP_LOGI(TAG, "MPU6050 initialized successfully");
+    } else {
+        ESP_LOGE(TAG, "MPU6050 initialization failed");
+    }
+
     xTaskCreate(gyro_task, "gyro_task", 2048, NULL, 5, NULL);
 }

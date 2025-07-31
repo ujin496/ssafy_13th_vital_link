@@ -1,2 +1,2 @@
-source C:/Users/SSAFY/user_sensor_board/build/bootloader/gdbinit/symbols
-source C:/Users/SSAFY/user_sensor_board/build/bootloader/gdbinit/connect
+source C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader/gdbinit/symbols
+source C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader/gdbinit/connect

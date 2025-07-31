@@ -22,4 +22,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file C:/Users/SSAFY/user_sensor_board/build/bootloader/bootloader.elf
+file C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader/bootloader.elf

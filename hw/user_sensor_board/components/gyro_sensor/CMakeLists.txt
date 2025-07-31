@@ -1,5 +1,6 @@
 idf_component_register(
     SRCS "src/gyro_sensor_task.c"
-         "src/드라이버.c"
+         "src/mpu6050_driver.c"
     INCLUDE_DIRS "include"
+    REQUIRES driver
 )

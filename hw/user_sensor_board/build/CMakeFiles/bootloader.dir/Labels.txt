@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/Users/SSAFY/user_sensor_board/build/CMakeFiles/bootloader
-C:/Users/SSAFY/user_sensor_board/build/CMakeFiles/bootloader.rule
-C:/Users/SSAFY/user_sensor_board/build/CMakeFiles/bootloader-complete.rule
-C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/CMakeFiles/bootloader
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/CMakeFiles/bootloader.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/CMakeFiles/bootloader-complete.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

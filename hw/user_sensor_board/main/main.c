@@ -12,5 +12,5 @@
 
 void app_main(void) {
     ibeacon_tag_start();
-    gyro_sensor_start();
+    // gyro_sensor_start();
 }

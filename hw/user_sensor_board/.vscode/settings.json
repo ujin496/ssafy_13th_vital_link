@@ -23,7 +23,8 @@
     "freertos.h": "c",
     "esp_log.h": "c",
     "i2c.h": "c",
-    "task.h": "c"
+    "task.h": "c",
+    "nimble_port.h": "c"
   },
   "idf.portWin": "COM3",
   "idf.flashType": "UART"

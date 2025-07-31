@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file C:/Users/SSAFY/user_sensor_board/build/bootloader/bootloader.elf
+    add-symbol-file C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file C:/Users/SSAFY/user_sensor_board/build/user_sensor_board.elf
+file C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/user_sensor_board.elf

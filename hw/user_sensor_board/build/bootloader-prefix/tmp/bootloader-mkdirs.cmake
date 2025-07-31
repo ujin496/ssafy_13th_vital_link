@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Users/SSAFY/esp/v5.5-rc1/esp-idf/components/bootloader/subproj
   file(MAKE_DIRECTORY "C:/Users/SSAFY/esp/v5.5-rc1/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/SSAFY/user_sensor_board/build/bootloader"
-  "C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix"
-  "C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/tmp"
-  "C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src"
-  "C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader"
+  "C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix"
+  "C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/tmp"
+  "C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src"
+  "C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/SSAFY/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/SSAFY/S13P11A107/hw/user_sensor_board/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
